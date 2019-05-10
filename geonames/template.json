@@ -1,0 +1,73 @@
+{
+  "template": "cities",
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "mappings": {
+    "properties": {
+      "@version": {
+        "type": "integer"
+      },
+      "geonameid": {
+        "type": "long"
+      },
+      "name": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "asciiname": {
+        "type": "text"
+      },
+      "alternatenames": {
+        "type": "text"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "feature_class": {
+        "type": "keyword"
+      },
+      "feature_code": {
+        "type": "keyword"
+      },
+      "country_code": {
+        "type": "keyword"
+      },
+      "cc2": {
+        "type": "keyword"
+      },
+      "admin1_code": {
+        "type": "keyword"
+      },
+      "admin2_code": {
+        "type": "keyword"
+      },
+      "admin3_code": {
+        "type": "keyword"
+      },
+      "admin4_code": {
+        "type": "keyword"
+      },
+      "population": {
+        "type": "long"
+      },
+      "elevation": {
+        "type": "integer"
+      },
+      "dem": {
+        "type": "integer"
+      },
+      "timezone": {
+        "type": "keyword"
+      },
+      "modification_date": {
+        "type": "date"
+      }
+    }
+  }
+}
